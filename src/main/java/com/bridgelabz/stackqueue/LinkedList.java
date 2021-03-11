@@ -3,13 +3,16 @@ package com.bridgelabz.stackqueue;
 public class LinkedList<T extends Comparable <T>> {
 
     Node<T> head;
+    Node<T> tail;
     int count;
     public LinkedList(T data) {
         head = new Node(data);
+        tail = head;
         count = 1;
     }
     public LinkedList(){
         this.head = null;
+        this.tail = null;
         count = 0;
     }
     public T getHead(){
@@ -19,15 +22,16 @@ public class LinkedList<T extends Comparable <T>> {
         return count;
     }
     public void pushBack(T next){
-        Node<T> temp = head;
+        count++;
+        Node<T> temp = tail;
         if(head == null){
             head = new Node<>(next);
+            tail = head;
             return;
         }
-        while(temp.hasNext())
-            temp = temp.next();
-        temp.link = new Node<>(next);
-        count++;
+        tail.link = new Node<>(next);
+        tail = tail.link;
+
     }
     public void pushFront(T next){
         Node<T> newNode = new Node<>(next);
