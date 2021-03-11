@@ -108,5 +108,8 @@ public class LinkedList<T extends Comparable <T>> {
         }
         pushBack(data);
     }
+    public boolean isEmpty(){
+        return head != null;
+    }
 
 }

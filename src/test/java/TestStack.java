@@ -26,4 +26,15 @@ public class TestStack {
         result = (int) stack.pop();
         Assertions.assertEquals(25, result);
     }
+
+    @Test
+    public void testEmpty(){
+        for(int i=0;i<5;i++){
+            stack.push(i*17+i);
+        }
+        while(!stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
+        Assertions.assertEquals(true,stack.isEmpty());
+    }
 }

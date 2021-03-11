@@ -15,6 +15,9 @@ public class Stack<T extends Comparable <T>> {
     public T top(){
         return stack.getHead();
     }
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
 
 
 }
