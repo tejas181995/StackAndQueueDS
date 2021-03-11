@@ -20,6 +20,10 @@ public class LinkedList<T extends Comparable <T>> {
     }
     public void pushBack(T next){
         Node<T> temp = head;
+        if(head == null){
+            head = new Node<>(next);
+            return;
+        }
         while(temp.hasNext())
             temp = temp.next();
         temp.link = new Node<>(next);

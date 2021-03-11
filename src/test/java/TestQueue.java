@@ -18,6 +18,7 @@ public class TestQueue {
     public void testPop() {
         int result ;
         result = (int) queue.pop();
+        System.out.println(result);
         Assertions.assertEquals(58, result);
 
     }

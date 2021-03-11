@@ -7,9 +7,9 @@ public class Queue<T extends Comparable <T>> {
         queue = new LinkedList<>();
     }
     public void push(T data){
-        queue.pushFront(data);
+        queue.pushBack(data);
     }
     public T pop(){
-        return queue.popLast();
+        return queue.pop();
     }
 }
